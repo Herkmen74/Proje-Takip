@@ -2,6 +2,18 @@
 
 YouTube'dan İngilizce videolar indirip, alt yazıları Türkçeye çeviren ve videoya ekleyen Python programı.
 
+## 🌐 Web Arayüzü (Yeni!)
+
+**iOS cihazlardan kullanım için web arayüzü eklenmiştir!**
+
+```bash
+python app.py
+```
+
+Sonra iOS Safari'den: `http://BILGISAYAR_IP:5000`
+
+📖 Detaylı kullanım için: [WEB_KULLANIM.md](WEB_KULLANIM.md)
+
 ## 🌟 Özellikler
 
 - ✅ YouTube videolarını otomatik indirir
