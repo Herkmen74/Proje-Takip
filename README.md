@@ -7,8 +7,17 @@ YouTube'dan İngilizce videolar indirip, alt yazıları Türkçeye çeviren ve v
 **iOS cihazlardan kullanım için web arayüzü eklenmiştir!**
 
 ```bash
+# Windows
+START_WEB.bat
+
+# Mac / Linux
+./START_WEB.sh
+
+# veya
 python app.py
 ```
+
+> ⚠️ Komut `python` olmalı (`phyton` değil).
 
 Sonra iOS Safari'den: `http://BILGISAYAR_IP:5000`
 
