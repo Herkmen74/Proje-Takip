@@ -186,32 +186,46 @@ def health():
     """Health check endpoint"""
     return jsonify({'status': 'ok', 'jobs': len(jobs)})
 
+def _find_free_port(start=5000, limit=20):
+    """Find an available TCP port starting from `start`."""
+    import socket
+    for port in range(start, start + limit):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            try:
+                sock.bind(('0.0.0.0', port))
+                return port
+            except OSError:
+                continue
+    return start
+
+
 if __name__ == '__main__':
     # Create output directory
     Path('output').mkdir(exist_ok=True)
-    
+
+    port = int(os.environ.get('PORT', _find_free_port(5000)))
+
     print("=" * 60)
-    print("🌐 YouTube Subtitle Translator - Web Arayüzü")
-    print("=" * 60)
-    print()
-    print("✨ Sunucu başlatılıyor...")
-    print()
-    print("📱 iOS Cihazınızdan Erişim:")
-    print()
-    print("   1. Bilgisayar ve telefon AYNI WiFi'ye bağlı olmalı")
-    print("   2. Bilgisayarınızın IP adresini öğrenin:")
-    print("      • Windows: ipconfig")
-    print("      • Mac/Linux: ifconfig veya ip addr")
-    print()
-    print("   3. iOS Safari'den şu adrese gidin:")
-    print("      http://BILGISAYAR_IP:5000")
-    print("      Örnek: http://192.168.1.100:5000")
-    print()
-    print("💻 Bilgisayardan Erişim:")
-    print("   http://localhost:5000")
-    print()
+    print("YouTube Subtitle Translator - Web Arayuzu")
     print("=" * 60)
     print()
-    
+    print("Sunucu baslatiliyor...")
+    print()
+    print("NOT: Bu Cursor Cloud ise telefonda localhost CALISMAZ.")
+    print("     Programi kendi bilgisayarinizda calistirin.")
+    print("     Detay: ONEMLI_OKU.md")
+    print()
+    print(f"Ayni makinede tarayici:  http://127.0.0.1:{port}")
+    print()
+    print("Kendi PC'nizde iPhone icin:")
+    print("  1. Bilgisayar ve telefon AYNI WiFi'de olsun")
+    print("  2. IP ogrenin (Windows: ipconfig / Mac: ifconfig)")
+    print(f"  3. Safari: http://BILGISAYAR_IP:{port}")
+    print()
+    print("Durdurmak icin: Ctrl+C")
+    print("=" * 60)
+    print()
+
     # Run on all interfaces so it's accessible from network
-    app.run(host='0.0.0.0', port=5000, debug=False, threaded=True)
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)

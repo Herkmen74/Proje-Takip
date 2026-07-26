@@ -39,14 +39,22 @@ FFmpeg yoksa kurun:
 
 ### 4) Sunucuyu başlatın
 
-```bash
-python app.py
-```
-
-veya
+Cursor / Linux ortamında çoğu zaman `python` yoktur. Şunu kullanın:
 
 ```bash
 python3 app.py
+```
+
+veya:
+
+```bash
+./baslat
+```
+
+Windows’ta genelde:
+
+```bash
+python app.py
 ```
 
 Şunu görmelisiniz:
