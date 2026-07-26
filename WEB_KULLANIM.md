@@ -2,9 +2,15 @@
 
 iOS cihazınızdan YouTube videolarına Türkçe alt yazı eklemek için web arayüzü kullanın.
 
+> ⚠️ Önce şunu okuyun: [ONEMLI_OKU.md](ONEMLI_OKU.md)  
+> Cursor telefon/bulut terminalinde sunucu açıp `localhost:5000` denemek **çalışmaz** (boş sayfa).  
+> Sunucu **kendi PC/Mac’inizde** çalışmalı.
+
 ## 📱 iOS'tan Nasıl Kullanılır?
 
-### 1️⃣ Bilgisayarınızda Sunucuyu Başlatın
+### 1️⃣ Kendi bilgisayarınızda Sunucuyu Başlatın
+
+Cursor Cloud değil — Windows/Mac bilgisayarınızın kendi terminali:
 
 ```bash
 # Gerekli paketleri yükleyin (ilk seferde)

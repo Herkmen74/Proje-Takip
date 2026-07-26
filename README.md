@@ -6,6 +6,10 @@ YouTube'dan İngilizce videolar indirip, alt yazıları Türkçeye çeviren ve v
 
 **iOS cihazlardan kullanım için web arayüzü eklenmiştir!**
 
+> ⚠️ **Önemli:** Sunucuyu **kendi bilgisayarınızda** çalıştırın.  
+> Cursor Cloud / telefon uygulamasındaki terminalde çalıştırıp `localhost:5000` açmak **boş sayfa** verir.  
+> Detay: [ONEMLI_OKU.md](ONEMLI_OKU.md)
+
 ```bash
 # Windows
 START_WEB.bat
@@ -17,11 +21,12 @@ START_WEB.bat
 python app.py
 ```
 
-> ⚠️ Komut `python` olmalı (`phyton` değil).
+> Komut `python` olmalı (`phyton` değil).
 
-Sonra iOS Safari'den: `http://BILGISAYAR_IP:5000`
+- Aynı bilgisayar: `http://localhost:5000`
+- iPhone (aynı WiFi): `http://BILGISAYAR_IP:5000`
 
-📖 Detaylı kullanım için: [WEB_KULLANIM.md](WEB_KULLANIM.md)
+📖 Detaylı kullanım: [WEB_KULLANIM.md](WEB_KULLANIM.md)
 
 ## 🌟 Özellikler
 
