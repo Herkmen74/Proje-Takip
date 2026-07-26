@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Tek komutla web sunucusunu baslatir
+cd "$(dirname "$0")"
+
+if command -v python3 >/dev/null 2>&1; then
+  exec python3 app.py
+elif command -v python >/dev/null 2>&1; then
+  exec python app.py
+else
+  echo "HATA: Python bulunamadi."
+  echo "Deneyin: python3 app.py"
+  exit 1
+fi
