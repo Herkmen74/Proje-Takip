@@ -10,9 +10,22 @@ iOS cihazınızdan YouTube videolarına Türkçe alt yazı eklemek için web ara
 # Gerekli paketleri yükleyin (ilk seferde)
 pip install -r requirements.txt
 
-# Web sunucusunu başlatın
+# Web sunucusunu başlatın (dikkat: python — phyton değil!)
 python app.py
 ```
+
+veya daha kolay:
+
+```bash
+# Windows
+START_WEB.bat
+
+# Mac / Linux
+./START_WEB.sh
+```
+
+> ⚠️ **Sık hata:** `phyton app.py` yazmak → `command not found`  
+> Doğrusu: `python app.py` veya `python3 app.py`
 
 Sunucu başladığında şuna benzer bir çıktı göreceksiniz:
 
